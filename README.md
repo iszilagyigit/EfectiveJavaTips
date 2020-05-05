@@ -50,7 +50,7 @@ Item 9. Prefer try-with-resources to try-finally
 Item 10. Follow the contract when overriding **equals**
   
 > See _Object.equals_  
-(https://docs.oracle.com/javase/8/docs/api/java/util/Objects.html#equals-java.lang.Object-java.lang.Object-)  
+(https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#equals-java.lang.Object-)  
 > reflexive, symmetric, transitive, consistent  
 
 Item 11. Always override **hashCode** when you override **equals**
