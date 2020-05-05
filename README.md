@@ -63,9 +63,27 @@ Item 14. Consider implementing _Comparable_ interface
   
 ## Classes and Interfaces  
   
-
-
+Item 15. Minimize the accessibility of classes and members  
   
+> Access levels preference: private, package-private, protected, public 
+
+Item 16. In public classes use accessor methods not public fields.  
+  
+Item 17. Minimize **_mutability**_  
+    
+Example immutable classes: String, BigInteger.  
+For "future" java versions (12+?) see also "value class"  
+https://www.oracle.com/technetwork/java/jvmls2016-goetz-3126134.pdf
+  
+> Rules for immutable class:  
+> Don't provide methods that modify the object's state  
+> Ensure that the class can't be extended  
+> Make all fields final  
+> Make all fields private  
+> Ensure exclusive access to any mutable components  
+  
+  
+
 
 
 
