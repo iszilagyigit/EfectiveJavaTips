@@ -76,11 +76,11 @@ For "future" java versions (12+?) see also "value class"
 https://www.oracle.com/technetwork/java/jvmls2016-goetz-3126134.pdf
   
 > Rules for immutable class:  
-> Don't provide methods that modify the object's state  
-> Ensure that the class can't be extended  
-> Make all fields final  
-> Make all fields private  
-> Ensure exclusive access to any mutable components  
+> * Don't provide methods that modify the object's state  
+> * Ensure that the class can't be extended  
+> * Make all fields final  
+> * Make all fields private  
+> * Ensure exclusive access to any mutable components  
   
   
 
