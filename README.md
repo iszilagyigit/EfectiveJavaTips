@@ -82,6 +82,16 @@ https://www.oracle.com/technetwork/java/jvmls2016-goetz-3126134.pdf
 > * Make all fields private  
 > * Ensure exclusive access to any mutable components  
   
+Item 18. Favor composition over inheritance  
+  
+> See also "Head First: Design Patterns"
+  
+Item 19. Design and **document** for inheritance or else prohibit it  
+  
+Item 20. Prefer interfaces to abstract classes  
+  
+Item 21. Design interfaces for posterity
+  
   
 
 
