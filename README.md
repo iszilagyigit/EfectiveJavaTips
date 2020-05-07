@@ -93,7 +93,58 @@ Item 20. Prefer interfaces to abstract classes
 Item 21. Design interfaces for posterity
   
   
+ ----
+ 
+ 
+ 
+ ## Exceptions
+ 
+Item 69. Use exceptions only for `exceptional` conditions  
+  
+> They should be never used for ordinary control flow.
+> Well designed API should not force the clients to user exceptions for ordinary control flow.
+ ```java
+ // Horrible abuse fro exceptions, don't ever do this.
+ try {
+   while (true) range[i++].climb();
+ }catch (ArrayIndexOutOfBoundException e) {...}
+```
+Item 70. Use checked exceptions for `recoverable` conditions and runtime exceptions for programming errors.
+  
+> By confronting the user with checked exception, the API designer presents a mandate to recover from the condition  
+> The great majority of runtime excetions in java indicate `precondition violation`  
+> One problem with this advise is that it *is not always clear* wheater your are dealing with recoverable condition or programming error.  
+> If is not clear wheather recovery is possible you are probably better using unchecked exceptions. (see Item71)
+  
+Item 71. Avoid unnecesarry use of checked exceptions
+  
+Item 72. Favor the use of standard exceptions.  
+  
+> zB. IllegalArgumentException, IllegalStateException, IndexOutOfBoundException, UnsupportedOperationException
+> makes your API easier to learn and use because use conventions that programmers are familiar with
+  
+Item 73. Throws exceptions appropiate to the abstraction
+  
+> While `exception translation` is superior to mindless propagation of exceptions from lower layers, `it should not be overused`
+  
+Item 74. **Document** all exceptions thrown by each method
+  
+> Use the javadoc @throws tag to document each exception can throw but **do not use the throws keyword on unchecked exceptions**
+  
+Item 75. Include failure capture information in detail message
+    
+Item 76. Strive for failure atomicity  
 
+> A failed method invocation should leave the object in the state that it was in prior to the invocation
+  
+Item 77. Don't ignore exceptions
+
+```java
+// Empty catch block ignore exception - Higly suspect!
+try {
+...
+}catch (SomeException e) {};
+```
 
 
 
