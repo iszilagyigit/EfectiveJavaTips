@@ -122,7 +122,7 @@ Item 32: Combine generics and varargs judiciously
 
 Item 33: Consider typesafeheterogeneus containers
 
-> Use Class.asSubclass for safety cast
+> Use Class.asSubclass for safety cast on generics
 
 ## Enums and Annotations
 
