@@ -92,12 +92,43 @@ Item 20. Prefer interfaces to abstract classes
   
 Item 21. Design interfaces for posterity
   
+## Generics
   
- ----
+Item 26: Don't use raw types.
+  
+> For example raw type corresponding to List<E> is List  
+
+Item 27: Eliminate unchecked warnings
+
+> If you can't eliminate and you can prove that the code is typesafe *only then* @SuppressWarnings
  
+Item 28: Prefer lists to arrays
+
+> arrays are covariant and reified (enforced by runtime), generics are invariant and erased (by compiler!)
+> in case type safety is more impotant as performance
+
+Item 29: Favor generic types
+
+Item 30: Favor generic methods
+
+Item 31: Use bounded wildcard to increase API flexibility.
+
+> while generics are invariants
+> for producer use extends for consumer use super
+
+Item 32: Combine generics and varargs judiciously
+
+> Dont do it :-)
+
+Item 33: Consider typesafeheterogeneus containers
+
+> Use Class.asSubclass for safety cast
+
+## Enums and Annotations
+
+## Lambdas and streams
  
- 
- ## Exceptions
+## Exceptions
  
 Item 69. Use exceptions only for `exceptional` conditions  
   
