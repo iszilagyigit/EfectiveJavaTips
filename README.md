@@ -126,6 +126,28 @@ Item 33: Consider typesafeheterogeneus containers
 
 ## Enums and Annotations
 
+Item 34: Use Enums instead of int constants
+ 
+> Implement the toString() method. 
+> Any time you need a set of constants whose members are known at compile time.
+> Consider "constant-specific" method implementation if needed
+> see also strategy-enum pattern
+ 
+Item 35: Use instance fields instead of ordinals
+
+> It was designed for internal use on EnumSet and EnumMap
+> Never derive a value of the enum from ordinal.
+
+Item 36: Use EnumSet instead of bit fields.
+
+> Ex: text.applyStyles(EnumSet.of(Style.BOLD, Style.Italic))
+
+Item 37: Use EnumMap instead of ordinal indexing.
+
+> TODO
+
+Item 38: Emulate extensible enums with interfaces.
+
 ## Lambdas and streams
  
 ## Exceptions
