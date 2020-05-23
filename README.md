@@ -144,9 +144,20 @@ Item 36: Use EnumSet instead of bit fields.
 
 Item 37: Use EnumMap instead of ordinal indexing.
 
-> TODO
+> Ex. Map<Enum1, X> enumMap = new EnumMap<>(Enum1.class)
 
 Item 38: Emulate extensible enums with interfaces.
+ 
+> Ex. public enum X implements Interface1
+
+Item 39: Prefer annotations to naming patterns
+
+Item 40: Consistently use the Override annotation
+ 
+> use it in every method that you believe to override a superclass annotation
+ 
+Item 41: Use marker interfaces to define types
+
 
 ## Lambdas and streams
  
