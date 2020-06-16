@@ -161,6 +161,16 @@ Item 41: Use marker interfaces to define types
 
 ## Lambdas and streams
  
+Item 42: Prefer lambda to anonymous classes
+
+> Omit the types of all lambda parameters unless the presence makes your code clearer
+> Lambda lack names and documentation; if computation isn't self explanatory or exceed few lines don't put it in lambda.
+
+Item 43: Prefer method reference to lambda
+
+> Example: map.merge(key, Integer::sum)
+
+ 
 ## Exceptions
  
 Item 69. Use exceptions only for `exceptional` conditions  
