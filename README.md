@@ -171,20 +171,21 @@ Item 43: Prefer method reference to lambda
 > Example: map.merge(key, Integer::sum)
 > Where method reference is shorter and clearer use them, otherwise stick with lambdas
 > Examples:
-> Integer::parseInt    str -> Integer.parseInt(str)
-> String::toLowerCase  str -> str.toLowerCase()
-> TreeMap<K,V>::new    () -> new TreeMap<>()
-> int[]::new           len -> new int[len]
+> * Integer::parseInt    str -> Integer.parseInt(str)
+> * String::toLowerCase  str -> str.toLowerCase()
+> * TreeMap<K,V>::new    () -> new TreeMap<>()
+> * int[]::new           len -> new int[len]
 
 Item 44: Favor the use of standard functional interfaces.(java.util.function.)
 
 > Examples: 
->  Predicate<T>  boolean test(T t)
->  Function<T,R) R apply(T t)
->  Supplier<T>   T get()
->  Consumer<T>   void accept(T t)
->  UnaryOperator<T> T apply(T t)
->  BinaryOperator<T> T apply(T t1, T t2)
+> * Predicate<T>  boolean test(T t)
+> * Function<T,R) R apply(T t)
+> * Supplier<T>   T get()
+> * Consumer<T>   void accept(T t)
+> * UnaryOperator<T> T apply(T t)
+> * BinaryOperator<T> T apply(T t1, T t2)
+>   
 > Use primitive functional interface instead of basic functional interface
 > Always annotate your functional interface with @FunctionalInterface annotation
   
