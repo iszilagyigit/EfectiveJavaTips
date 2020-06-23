@@ -189,7 +189,11 @@ Item 44: Favor the use of standard functional interfaces.(java.util.function.)
 > Use primitive functional interface instead of basic functional interface
 > Always annotate your functional interface with @FunctionalInterface annotation
   
-  
+Item 45: Use streams judiciously
+
+> overusing streams makes program hard to read and maintain
+> name carefuly the lambda parameter to increase the readability of stream pipeline
+> using helper method is even more important for readability then in iterative code
 
 ## Exceptions
  
@@ -198,7 +202,7 @@ Item 69. Use exceptions only for `exceptional` conditions
 > They should be never used for ordinary control flow.
 > Well designed API should not force the clients to user exceptions for ordinary control flow.
  ```java
- // Horrible abuse fro exceptions, don't ever do this.
+ // Horrible abuse from exceptions, don't ever do this.
  try {
    while (true) range[i++].climb();
  }catch (ArrayIndexOutOfBoundException e) {...}
