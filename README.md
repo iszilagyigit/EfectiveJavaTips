@@ -221,6 +221,14 @@ Item 49: Check paramters for validity
 > Each time you write a public method or constructor think about what restrictions exists on its parameters.
 > See also Objects.requireNonNull or custom @NonNull @Nullable annotations.
 
+Item 50: Make defensive copies when needed
+
+> If a class has mutable components that it gets from or returns to its clients, the class must defensively
+> copy those components. If the cost of the copy would be prohibitive and the class trust its clients not to modify
+> the components inappropriately, then the defensive copy may be replaced by documentation.
+
+> Do not use clone method to make defensive copies by non final classes.
+
 
 
 
