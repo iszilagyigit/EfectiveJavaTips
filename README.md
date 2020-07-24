@@ -229,6 +229,24 @@ Item 50: Make defensive copies when needed
 
 > Do not use clone method to make defensive copies by non final classes.
 
+Item 51: Design method signatures carefully
+
+* Choose method names carefully
+* Don't overboard with convenient methods. When in doubt, leave it out.
+* For parameter types favor interfaces over classes
+* Prefer two element enum instead of boolean unless the meaning is clear from method name.
+* Avoid long parameter list. Preferable less then 4
+1) to break the method in multiple methods
+2) use helper klass to hold group of parameters
+3) adapt the Builder pattern from Object creation to method invocation
+
+Item 52: Use overloading judiciously
+
+> selection among overloaded methods is static (compile time),
+> while selection over overridden methods is dyanmic(runtime)
+
+
+
 
 
 
