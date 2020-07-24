@@ -195,6 +195,28 @@ Item 45: Use streams judiciously
 > name carefuly the lambda parameter to increase the readability of stream pipeline
 > using helper method is even more important for readability then in iterative code
 
+Item 46: Prefer side effect free functions in streams
+
+> essence of stream pipelines are side effect free function objects. The terminal operation
+> forEach should inly be used to report the result, not for calculation.
+> You need to know about collectors. The most important collector factories are:
+> toList, toSet, toMap, groupingBy
+
+Itemp 47: Prefer Collection to Stream as a return type
+
+> Collection or an appropiate subtype is generally the best return type for public 
+> sequence returning method, but do not store large sequence in memory ust to return it
+> as a collection.
+
+Item 48: Use caution when making streams parallel
+
+> Parallelizing a pipeline is unlikely increase its performance if th esource is from *Stream.iterate*
+> or the operation *limit* is used. Performance gain is the best on streams over ArrayList, HashMap,
+HashSet, ConcurrentHashMap, arrays; int ranges and long ranges.
+
+
+
+
 ## Exceptions
  
 Item 69. Use exceptions only for `exceptional` conditions  
@@ -243,6 +265,7 @@ try {
 ...
 }catch (SomeException e) {};
 ```
+
 
 
 
