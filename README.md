@@ -214,6 +214,13 @@ Item 48: Use caution when making streams parallel
 > or the operation *limit* is used. Performance gain is the best on streams over ArrayList, HashMap,
 HashSet, ConcurrentHashMap, arrays; int ranges and long ranges.
 
+## Methods
+
+Item 49: Check paramters for validity
+
+> Each time you write a public method or constructor think about what restrictions exists on its parameters.
+> See also Objects.requireNonNull or custom @NonNull @Nullable annotations.
+
 
 
 
