@@ -264,6 +264,10 @@ Item 53. Use varargs judiciously
 > Precede the varargs parameter with any required parameters, and be aware of the performance consequences 
 using varargs.
 
+Item 54. Return empty collections or arrays, instead of not nulls.
+
+> Don't return null in place of empty array or collections.
+
 
 
 ## Exceptions
