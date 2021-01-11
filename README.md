@@ -244,7 +244,6 @@ Item 52: Use overloading judiciously
 
 > selection among overloaded methods (same name oder parameters!) is static (compile time),
 > while selection over overridden methods is dyanmic(runtime)
-> A safe conservative policy is never to export overloading with the same number of parameters.
 
 example:
 ```java
@@ -258,6 +257,12 @@ System.out.println(set + " " + list);
 // Correct would be  list.remove((Integer)i); or list.remove(Integer.valueOf(i));
 ```
 * Do NOT overload methods to take DIFFERENT functional interfaces in the same argument position.
+* A safe conservative policy is never to export overloading with the same number of parameters.
+
+Item 53. Use varargs judiciously
+
+> Precede the varargs parameter with any required parameters, and be aware of the performance consequences 
+using varargs.
 
 
 
