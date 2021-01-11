@@ -266,7 +266,9 @@ using varargs.
 
 Item 54. Return empty collections or arrays, instead of not nulls.
 
-> Don't return null in place of empty array or collections.
+> Don't return null in place of empty array or collections. In the unlikely event that there is evidence suggesting
+that allocating empty connections is harming performance you can return the same immutable empty Collection.
+(Collections.emptyList())
 
 
 
