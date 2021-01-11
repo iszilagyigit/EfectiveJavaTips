@@ -242,11 +242,22 @@ Item 51: Design method signatures carefully
 
 Item 52: Use overloading judiciously
 
-> selection among overloaded methods is static (compile time),
+> selection among overloaded methods (same name oder parameters!) is static (compile time),
 > while selection over overridden methods is dyanmic(runtime)
+> A safe conservative policy is never to export overloading with the same number of parameters.
 
-
-
+example:
+```java
+Set<Integer> set = new TreeSet<>();
+List<Integer> list = new ArrayList<>();
+for (int i = -3; i < 3; i++) { set.add(i);list.add(i);}
+// remove postive elements:
+for (int i = 0; i < 3; i++) { set.remove(i);list.remove(i);}
+System.out.println(set + " " + list);
+// prints [-3, -2, -1][-2, 0, 2] Because of overloaded remove method.
+// Correct would be  list.remove((Integer)i); or list.remove(Integer.valueOf(i));
+```
+* Do NOT overload methods to take DIFFERENT functional interfaces in the same argument position.
 
 
 
