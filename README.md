@@ -271,6 +271,33 @@ that allocating empty connections is harming performance you can return the same
 (Collections.emptyList())
 
 
+Item 55. Return Optional<T> judiciously
+ 
+* Container Types, including collections, maps, streams, arrays and optionals should NOT be wrapped in optionals.
+* Never return optional of a boxed primitive type.
+* It is almost never appropiate to use optional as a key, value or element in a collection or array.
+
+Item 56. Write javadoc comments for all exposed API elements
+
+* The javadoc comment for a method should describe succintly the contract between the method and its client.
+* Don't forgett to take special actions if your description contains HTML metacharacters like <,>,&. Surrond them with
+{@literal}.
+* Whether or not a class or static method is thread-safe, you should document its thread-safety.
+
+
+## General Programming
+
+Item 57. Minimize the scope of local variables.
+
+* Declare it where its first used
+* Nearly every local variable should contain an initializer
+* Prefer for loops to while loops 
+
+Item 58. Prefer for-each loop to traditional for loops
+
+Item 59. Know and use the libraries
+
+
 
 ## Exceptions
  
