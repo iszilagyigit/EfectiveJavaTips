@@ -297,6 +297,37 @@ Item 58. Prefer for-each loop to traditional for loops
 
 Item 59. Know and use the libraries
 
+* Every Java programmer should be familiar with java.lang, java.util and java.(n)io and
+their subpackages
+* By using a standard library, you take advantage of the knowledge of the experts who wrote it
+and the experience of those who used it before
+* Library code receives far more attention than most developers coud afford to devote to the same functionality
+
+Item 60. Avoid float abd double if _exact_ answers are required.
+
+* Use BigDecimal, it or long for Monetary calculations where rounding issues are relevant.
+* If the quantities might exceed eighteen digits, use BigDecimal
+
+Item 61. Prefer primitive types to boxed primitives
+
+* Applying the == operator to boxed primitives is almost always wrong
+* When you mix primitives and boxed primitives in an operation (ex +, -) the boxed
+primitive is auto-unboxed
+* When your program does unboxing it can throw a NullPointerException
+
+Item 62. Avoid strings where other types are most appropiate
+
+* Strings are poor substitutes for enum types
+* Strings are poor substitutes for aggregate types
+
+Item 63. Beware the performance of string concatenation
+
+* This is an unfortunate consequence that Strings are immutable
+* Don't use the + to combine more then a few Strings (alternative StringBuilder, StringBuffer)
+
+
+
+
 
 
 ## Exceptions
