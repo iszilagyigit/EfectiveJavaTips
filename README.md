@@ -325,8 +325,24 @@ Item 63. Beware the performance of string concatenation
 * This is an unfortunate consequence that Strings are immutable
 * Don't use the + to combine more then a few Strings (alternative StringBuilder, StringBuffer)
 
+Item 64. Refer to objects by their interfaces
 
+* If appropiate interface type exist, then parameters, return values, variables and fields should all be declared
+using interface type.
+Ex:
+```java
+// instead of TreeSet<Integer> set = new TreeSet<>();
+Set<Integer> set = new TreeSet<>();
+```
+* If there is no appropiate interface then use the least specific class in hierarchy that provides the required functionality.
 
+Item 65. Prefer interfaces to reflection
+
+> By reflection you loose benefits from compile time checking and performance suffer
+> Creates instances reflectively and access them normally via their interface or superclass.
+
+* You can create the instance reflectively and access them normally via their interface or superclass.
+* In case if reflection is not avoidable the length of programm with reflection can be reduced by catching *ReflectiveOperationException*.
 
 
 
