@@ -344,7 +344,31 @@ Item 65. Prefer interfaces to reflection
 * You can create the instance reflectively and access them normally via their interface or superclass.
 * In case if reflection is not avoidable the length of programm with reflection can be reduced by catching *ReflectiveOperationException*.
 
+Item 66. Use native methods judiciously
 
+* It's rarely advisable to use native mehtods for performance improvements
+
+Item 67. Optimize judiciously
+
+> It's easy to do more harm then good expecially if you optimize prematurely.
+
+* Strive to write good programs rather then fast ones and don't sacrifice sound architecture principles for performance.
+* Strive to avoid design decisions that limit performance
+* Consider the performance consequences of your API design decisions
+* Measure performance before and after each attempted optimisation
+* Common wisdom says that 90% of the software time is in 10% od the code
+* Use profiling tools
+
+Item 68. Adhere to generally accepted naming convention
+
+> See: The Java Language Specification JLS, 6.1
+
+Examples:
+Package: org.junit
+Classes: Stream, FutureTask
+Method: remove, add
+Constant Field: MIN_VALUE
+Type Parameter (generics): T,E,K,V,X,R,U,V,T1,T2
 
 ## Exceptions
  
