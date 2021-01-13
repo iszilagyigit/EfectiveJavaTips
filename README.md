@@ -419,6 +419,22 @@ try {
 }catch (SomeException e) {};
 ```
 
+### Concurrency
+
+Item 78. Synchronize access to shared mutable data
+
+* The language spec guarantee that reading/writing primitives is atomic unless is long or double
+JLS 17.4, 17.7
+* Synchronization is needed for communication between threads as well as mutual exclusion
+* Be aware the VM may "rewrite" the code by execution (hoisting!)
+* Synchronization is not guaranteed to work unless both read and write operations are synchronized
+* Better is either share only immutable data / confine mutable data to single thread
+* If you need only inter-thread communication and not mutual exclusion the volatile modifier is acceptable
+but can be tricky to use correctly
+
+Item 79. Avoid excessive synchronization
+
+
 
 
 
