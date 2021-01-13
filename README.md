@@ -434,6 +434,28 @@ but can be tricky to use correctly
 
 Item 79. Avoid excessive synchronization
 
+* Never code control to the client within synchronized method
+* Keep the amount of work in synchronized block or method to minimum
+* Java locks are reentrant
+* Excessive synchr can cause performance issue, deadlock or even nondeterministic behaviour
+* Symnchronize internally only if there is a good reason to do so and document the decision clearly
+
+Item 80. Prefer executors, tasks, and streams to threads
+
+```java
+// Example of simple executor instead of thread:
+ExecutorService exec = Executors.newSingleThreadExecutor()
+exec.execute(runnable);
+exec.shutdown();
+```
+See also: Java Concurrency in Practice (Goetz Brian 2006)
+
+Item 81. Prefer concurrency utilities to wait and notify
+
+* Use ConcurrentHashMap in pereference to Collections.synchronizedMap
+
+Item 82. Document thread-safety
+
 
 
 
