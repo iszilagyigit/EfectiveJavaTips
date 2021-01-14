@@ -1,7 +1,8 @@
 # EfectiveJavaTips
 
 ## Introduction  
-Tipps from **Effective Java (Third Edition)** Get the book from your store for details.
+Tipps from **Effective Java (Third Edition)**.
+Buy the book from your favorite store for details.
   
 
 ## Creating and Destroying Objects.  
@@ -501,15 +502,15 @@ Item 87. Consider using custom serialization form.
 * Use the default java Serialization form only if it is a reasonable descrition of the logical state of the object
 * Do not change the serial version UID unless you explecitely want to break the compatibility with all existing serialized instances
 
-Item 88. Write readObject method defensively
+Item 88. Write readObject method defensively.
 
 > Anytime you write a readObject method adopt the mind-set that you write a public constructor which must make a valid object regardless what byte stream input comes.
 
-Item 89. For instance control, prefer enum types to readResolve
+Item 89. For instance control, prefer enum types to readResolve.
 
 > Use java enum types to enforce instance control invariants where ever possible.
 
-Item 90. Consider serialization proxies instead of serialized instances
+Item 90. Consider serialization proxies instead of serialized instances.
 
 > Consider the serialization proxy pattern whenever you write a readObject or writeObject on a final class.
 
