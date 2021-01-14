@@ -462,12 +462,12 @@ a class behaviour about its methods accessed concurently. A class must clearly d
 what level of thread safety it supports:
 
 Thread Safety levels: 
-* Immutable (no external synchr is necessary. Ex: String, BigInteger
-* Unconditionally thread-safe (has enough synchronization for safe concurrent use. Ex: AtomicLong, ConcurrentHashMap)
-* Conditionally thread-safe (like unconditionally but some methods require external syncronization: Ex: Collections.synchronizrf wrappers 
+* *Immutable* (no external synchr is necessary. Ex: String, BigInteger
+* *Unconditionally Thread-safe* (has enough synchronization for safe concurrent use. Ex: AtomicLong, ConcurrentHashMap)
+* *Conditionally Thread-safe* (like unconditionally but some methods require external syncronization: Ex: Collections.synchronizrf wrappers 
 whose iterators require external synchronization
-* Not thread-safe (example: ArrayList, HashMap)
-* Thread-hostile (not htread safe even if the client use external synchronization (ex. class modifies a static variable)
+* *Not Thread-safe* (example: ArrayList, HashMap)
+* *Thread-hostile* (not htread safe even if the client use external synchronization (ex. class modifies a static variable)
 No one writes thread-hostile class on purpose, it is typically fixed or deprecated.
 
 > To prevent deny of service attach (because of publicly accessible locks) you can use provate lock object instead of using synchronized methods.
