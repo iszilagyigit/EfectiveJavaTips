@@ -474,8 +474,15 @@ No one writes thread-hostile class on purpose, it is typically fixed or deprecat
 Lock fields shoud always be declared final.
 
 
+Item 83. Use lazy initialization joudiciously
 
+> Use only if the field is costly to initialize and it's used in a small fraction of the class instances.
+> If multiple threads share the lazy initialization field it's critical that some form of synchronization applied.
 
+* For instance fields use the double-check idiom
+* For static fields the initialization holder class idiom (it use the JLS 12.4.1 gurarantee that the class will not be initialized until it is used)
+
+Item 84. Don't depend on thread scheduler
 
 
 
