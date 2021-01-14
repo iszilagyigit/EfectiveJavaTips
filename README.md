@@ -1,7 +1,7 @@
 # EfectiveJavaTips
 
 ## Introduction  
-Tipps from **Effective Java (Third Edition)** Get the book from Amazon for details.
+Tipps from **Effective Java (Third Edition)** Get the book from your store for details.
   
 
 ## Creating and Destroying Objects.  
