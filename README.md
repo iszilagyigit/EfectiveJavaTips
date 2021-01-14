@@ -467,11 +467,11 @@ Thread Safety levels:
 * *Conditionally Thread-safe* (like unconditionally but some methods require external syncronization: Ex: Collections.synchronizrf wrappers 
 whose iterators require external synchronization
 * *Not Thread-safe* (example: ArrayList, HashMap)
-* *Thread-hostile* (not htread safe even if the client use external synchronization (ex. class modifies a static variable)
+* *Thread-hostile* (not thread safe even if the client use external synchronization (ex. class modifies a static variable)
 No one writes thread-hostile class on purpose, it is typically fixed or deprecated.
 
-> To prevent deny of service attach (because of publicly accessible locks) you can use provate lock object instead of using synchronized methods.
-Lock fields shuld always be declared final.
+> To prevent deny of service attach (because of publicly accessible locks) you can use private lock object instead of using synchronized methods.
+Lock fields shoud always be declared final.
 
 
 
