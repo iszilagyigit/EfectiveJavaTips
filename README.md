@@ -473,7 +473,6 @@ No one writes thread-hostile class on purpose, it is typically fixed or deprecat
 > To prevent deny of service attach (because of publicly accessible locks) you can use private lock object instead of using synchronized methods.
 Lock fields shoud always be declared final.
 
-
 Item 83. Use lazy initialization joudiciously
 
 > Use only if the field is costly to initialize and it's used in a small fraction of the class instances.
@@ -483,6 +482,39 @@ Item 83. Use lazy initialization joudiciously
 * For static fields the initialization holder class idiom (it use the JLS 12.4.1 gurarantee that the class will not be initialized until it is used)
 
 Item 84. Don't depend on thread scheduler
+
+> Any java programm that relies on the thread-scheduler or thread-priority for the correctness or performance is likely to be nonportable.
+> Thread should not run if they aren't doing useful work (aboud *busy-wait*)
+
+## Serialization
+
+Item 85. Prefer alternative to java serialization.
+
+> Alternative examples: XML, JSON.
+
+Item 86. Implement *Serializable* with great caution.
+
+> Avoid writing serializable classes, if you must do so exercise great caution.
+
+Item 87. Consider using custom serialization form.
+
+* Use the default java Serialization form only if it is a reasonable descrition of the logical state of the object
+* Do not change the serial version UID unless you explecitely want to break the compatibility with all existing serialized instances
+
+Item 88. Write readObject method defensively
+
+> Anytime you write a readObject method adopt the mind-set that you write a public constructor which must make a valid object regardless what byte stream input comes.
+
+Item 89. For instance control, prefer enum types to readResolve
+
+> Use java enum types to enforce instance control invariants where ever possible.
+
+Item 90. Consider serialization proxies instead of serialized instances
+
+> Consider the serialization proxy pattern whenever you write a readObject or writeObject on a final class.
+
+
+
 
 
 
