@@ -454,7 +454,26 @@ Item 81. Prefer concurrency utilities to wait and notify
 
 * Use ConcurrentHashMap in pereference to Collections.synchronizedMap
 
+
 Item 82. Document thread-safety
+
+> If this aspect its forgotten in javadoc then client needs to make assumption of
+a class behaviour about its methods accessed concurently. A class must clearly document
+what level of thread safety it supports:
+
+Thread Safety levels: 
+* Immutable (no external synchr is necessary. Ex: String, BigInteger
+* Unconditionally thread-safe (has enough synchronization for safe concurrent use. Ex: AtomicLong, ConcurrentHashMap)
+* Conditionally thread-safe (like unconditionally but some methods require external syncronization: Ex: Collections.synchronizrf wrappers 
+whose iterators require external synchronization
+* Not thread-safe (example: ArrayList, HashMap)
+* Thread-hostile (not htread safe even if the client use external synchronization (ex. class modifies a static variable)
+No one writes thread-hostile class on purpose, it is typically fixed or deprecated.
+
+> To prevent deny of service attach (because of publicly accessible locks) you can use provate lock object instead of using synchronized methods.
+Lock fields shuld always be declared final.
+
+
 
 
 
