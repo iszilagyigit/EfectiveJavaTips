@@ -464,7 +464,7 @@ what level of thread safety it supports:
 Thread Safety levels: 
 * *Immutable* (no external synchr is necessary. Ex: String, BigInteger
 * *Unconditionally Thread-safe* (has enough synchronization for safe concurrent use. Ex: AtomicLong, ConcurrentHashMap)
-* *Conditionally Thread-safe* (like unconditionally but some methods require external syncronization: Ex: Collections.synchronizrf wrappers 
+* *Conditionally Thread-safe* (like unconditionally but some methods require external syncronization: Ex: Collections.synchronizer wrappers 
 whose iterators require external synchronization
 * *Not Thread-safe* (example: ArrayList, HashMap)
 * *Thread-hostile* (not thread safe even if the client use external synchronization (ex. class modifies a static variable)
